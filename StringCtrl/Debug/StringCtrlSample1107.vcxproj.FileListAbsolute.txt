@@ -1,0 +1,2 @@
+C:\Users\user\source\repos\StringCtrlSample1107\Debug\StringCtrlSample1107.exe
+C:\Users\user\source\repos\StringCtrlSample1107\Debug\StringCtrlSample1107.pdb
