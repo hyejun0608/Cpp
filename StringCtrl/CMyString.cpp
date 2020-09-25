@@ -10,7 +10,6 @@ CMyString::~CMyString() {
 	Release();
 }
 
-
 int CMyString::SetString(const char* pszParam) {
 	int m_nLength = strlen(pszParam);
 	if (pszParam != NULL) {
@@ -24,7 +23,10 @@ int CMyString::SetString(const char* pszParam) {
 	return 0;
 }
 
-const char* CMyString::GetString() {
+const char* CMyString::GetString() const {
+	if (this->m_pszData == nullptr) {
+		return "Error";
+	}
 	return m_pszData;
 }
 
