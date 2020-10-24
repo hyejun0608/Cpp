@@ -2,16 +2,23 @@
 #include "CMyString.h"
 using namespace std;
 
-CMyString TestFunc() {
-	CMyString strTest("TestFunc() return");
-	cout << strTest << endl;
-
-	return strTest;
-}
-
 int main() {
-	// 이름없는 임시 객체가 만들어진다.
-	TestFunc();
+	CMyString strParam("StudentID: 1107"), strName("Name: 김혜준");
+
+	if (strParam == strName) {
+		cout << "같다!" << endl;
+	}
+	else {
+		cout << "다르다!" << endl;
+	}
+	CMyString strTest = CMyString("StudentID: 1107");
+
+	if (strParam != strTest) {
+		cout << "다르다!" << endl;
+	}
+	else {
+		cout << "같다!" << endl;
+	}
 
 	return 0;
 }
