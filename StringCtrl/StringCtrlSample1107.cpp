@@ -1,24 +1,15 @@
 ﻿#include <iostream>
 #include "CMyString.h"
+#include "CMyStringEx.h"
 using namespace std;
 
 int main() {
-	CMyString strParam("StudentID: 1107"), strName("Name: 김혜준");
+	CMyStringEx strTest;
+	strTest.SetString("학번: 1107, 이름: 김혜준");
+	cout << strTest << endl;
 
-	if (strParam == strName) {
-		cout << "같다!" << endl;
-	}
-	else {
-		cout << "다르다!" << endl;
-	}
-	CMyString strTest = CMyString("StudentID: 1107");
-
-	if (strParam != strTest) {
-		cout << "다르다!" << endl;
-	}
-	else {
-		cout << "같다!" << endl;
-	}
+	int nIndex = strTest.Find("김혜준");
+	cout << "Index: " << nIndex << endl;
 
 	return 0;
 }
